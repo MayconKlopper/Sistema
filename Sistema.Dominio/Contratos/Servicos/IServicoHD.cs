@@ -5,11 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Sistema.Dominio.Entidades;
-using Sistema.Dominio.Contratos.Repositorios;
 
-namespace Sistema.InfraEstrutura.Repositorios
+namespace Sistema.Dominio.Contratos.Servicos
 {
-    public class RepositorioHD : RepositorioGenerico<HD>, IRepositorioHD
+    public interface IServicoHD : IServicoGenerico<HD>
     {
 
     }
