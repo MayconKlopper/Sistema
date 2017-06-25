@@ -40,12 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\Computador.cs" />
+    <Compile Include="Entidades\Fonte.cs" />
+    <Compile Include="Entidades\HD.cs" />
+    <Compile Include="Entidades\MemoriaRAM.cs" />
+    <Compile Include="Entidades\PlacaMae.cs" />
+    <Compile Include="Entidades\Processador.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Contratos\Repositorios\" />
     <Folder Include="Contratos\Servicos\" />
-    <Folder Include="Entidades\" />
     <Folder Include="Servicos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
