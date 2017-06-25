@@ -22,7 +22,7 @@ namespace Sistema.Apresentacao.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("Conexao", throwIfV1Schema: false)
+            : base("BaseDados", throwIfV1Schema: false)
         {
         }
 

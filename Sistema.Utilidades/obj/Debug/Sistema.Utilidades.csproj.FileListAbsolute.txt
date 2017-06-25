@@ -1,0 +1,5 @@
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Utilidades\bin\Debug\Sistema.Utilidades.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Utilidades\bin\Debug\Sistema.Utilidades.pdb
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Utilidades\obj\Debug\Sistema.Utilidades.csprojResolveAssemblyReference.cache
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Utilidades\obj\Debug\Sistema.Utilidades.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Utilidades\obj\Debug\Sistema.Utilidades.pdb

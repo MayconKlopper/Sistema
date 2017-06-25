@@ -12,5 +12,11 @@ namespace Sistema.Dominio.Entidades
         public string Modelo { get; set; }
         public string Marca { get; set; }
         public string Velocidade { get; set; }
+
+        #region Relacionamentos
+
+        public Computador Computador { get; set; }
+
+        #endregion
     }
 }

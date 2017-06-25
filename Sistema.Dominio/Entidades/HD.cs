@@ -9,7 +9,13 @@ namespace Sistema.Dominio.Entidades
     public class HD
     {
         public int IDHD { get; set; }
-        public int Qantidade { get; set; }
+        public int Quantidade { get; set; }
         public string Capacidade { get; set; }
+
+        #region Relacionamentos
+
+        public Computador Computador { get; set; }
+
+        #endregion
     }
 }

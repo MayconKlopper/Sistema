@@ -1,0 +1,4 @@
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Dominio\bin\Debug\Sistema.Dominio.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Dominio\bin\Debug\Sistema.Dominio.pdb
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Dominio\obj\Debug\Sistema.Dominio.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Dominio\obj\Debug\Sistema.Dominio.pdb

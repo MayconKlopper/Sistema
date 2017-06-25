@@ -11,5 +11,11 @@ namespace Sistema.Dominio.Entidades
         public int IDPlacaMae { get; set; }
         public string Modelo { get; set; }
         public string Marca { get; set; }
+
+        #region Relacionamentos
+
+        public Computador Computador { get; set; }
+
+        #endregion
     }
 }

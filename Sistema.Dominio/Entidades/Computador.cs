@@ -15,5 +15,15 @@ namespace Sistema.Dominio.Entidades
         public int IDFonte { get; set; }
         public int IDProcessador { get; set; }
         public string IDUsuario { get; set; }
+
+        #region Relacionamentos
+
+        public PlacaMae PlacaMae { get; set; }
+        public MemoriaRAM MemoriaRAM { get; set; }
+        public HD HD { get; set; }
+        public Fonte Fonte { get; set; }
+        public Processador Processador { get; set; }
+
+        #endregion
     }
 }

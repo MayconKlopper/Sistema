@@ -1,0 +1,12 @@
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.InfraEstrutura\bin\Debug\Sistema.InfraEstrutura.dll.config
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.InfraEstrutura\bin\Debug\Sistema.InfraEstrutura.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.InfraEstrutura\bin\Debug\Sistema.InfraEstrutura.pdb
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.InfraEstrutura\bin\Debug\EntityFramework.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.InfraEstrutura\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.InfraEstrutura\bin\Debug\Sistema.Dominio.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.InfraEstrutura\bin\Debug\Sistema.Dominio.pdb
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.InfraEstrutura\bin\Debug\EntityFramework.xml
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.InfraEstrutura\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.InfraEstrutura\obj\Debug\Sistema.InfraEstrutura.csprojResolveAssemblyReference.cache
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.InfraEstrutura\obj\Debug\Sistema.InfraEstrutura.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.InfraEstrutura\obj\Debug\Sistema.InfraEstrutura.pdb

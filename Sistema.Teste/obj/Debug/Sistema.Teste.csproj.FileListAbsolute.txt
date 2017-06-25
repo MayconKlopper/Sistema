@@ -1,0 +1,7 @@
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Teste\bin\Debug\Sistema.Teste.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Teste\bin\Debug\Sistema.Teste.pdb
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Teste\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Teste\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Teste\obj\Debug\Sistema.Teste.csprojResolveAssemblyReference.cache
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Teste\obj\Debug\Sistema.Teste.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Teste\obj\Debug\Sistema.Teste.pdb
