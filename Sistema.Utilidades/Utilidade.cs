@@ -5,7 +5,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemaIbade.Util
+namespace Sistema.Utililidades
 {
     /// <summary>
     /// Classe com métodos variados de utilidade

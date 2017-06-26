@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemaIbade.Util
+namespace Sistema.Utililidades
 {
     /// <summary>
     /// Classe que contém métodos úteis de conversão

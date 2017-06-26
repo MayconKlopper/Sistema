@@ -80,3 +80,9 @@ c:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentaca
 c:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\obj\Debug\Sistema.Apresentacao.csprojResolveAssemblyReference.cache
 c:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\obj\Debug\Sistema.Apresentacao.dll
 c:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\obj\Debug\Sistema.Apresentacao.pdb
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\bin\Sistema.Dominio.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\bin\Sistema.InfraEstrutura.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\bin\Sistema.Utilidades.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\bin\Sistema.Dominio.pdb
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\bin\Sistema.InfraEstrutura.pdb
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\bin\Sistema.Utilidades.pdb

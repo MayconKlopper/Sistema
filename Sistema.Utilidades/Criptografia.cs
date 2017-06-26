@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Security.Cryptography;
 
-namespace SistemaIbade.Util
+namespace Sistema.Utililidades
 {
     /// <summary>
     /// Classe com métodos de criptografia e descriptografia

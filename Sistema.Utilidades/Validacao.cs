@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemaIbade.Util
+namespace Sistema.Utililidades
 {
     /// <summary>
     /// classe com métodos de validações diversas
