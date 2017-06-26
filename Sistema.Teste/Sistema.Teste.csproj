@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\Sistema.InfraEstrutura\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -45,13 +48,30 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="TesteFonte.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TesteHD.cs" />
+    <Compile Include="TestePlacaMae.cs" />
+    <Compile Include="TesteMemoriaRAM.cs" />
+    <Compile Include="TesteProcessador.cs" />
+    <Compile Include="TesteComputador.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sistema.Dominio\Sistema.Dominio.csproj">
+      <Project>{3eeecde3-03e7-4385-99fc-c5076540fa5c}</Project>
+      <Name>Sistema.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sistema.InfraEstrutura\Sistema.InfraEstrutura.csproj">
+      <Project>{6e71ed49-f12e-4b24-a63e-b87c18cc3a8b}</Project>
+      <Name>Sistema.InfraEstrutura</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

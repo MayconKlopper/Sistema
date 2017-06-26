@@ -20,6 +20,10 @@ namespace Sistema.InfraEstrutura.Configuracoes
             Property(hd => hd.IDHD)
                 .HasColumnName("IDHD");
 
+            //Property(hd => hd.IDComputador)
+            //    .HasColumnName("IDComputador")
+            //    .IsRequired();
+
             Property(hd => hd.Quantidade)
                 .HasColumnName("Quantidade")
                 .IsRequired();
@@ -27,6 +31,9 @@ namespace Sistema.InfraEstrutura.Configuracoes
             Property(hd => hd.Capacidade)
                 .HasColumnName("Capacidade")
                 .IsRequired();
+
+            //HasRequired(hd => hd.Computadores)
+            //    .WithOptional(computador => computador.HD);
         }
     }
 }

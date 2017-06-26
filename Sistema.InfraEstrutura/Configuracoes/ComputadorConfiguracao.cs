@@ -48,19 +48,24 @@ namespace Sistema.InfraEstrutura.Configuracoes
             #region Relacionamentos
 
             HasRequired(computador => computador.PlacaMae)
-                .WithOptional(placaMae => placaMae.Computador);
+                .WithMany(placaMae => placaMae.Computadores)
+                .HasForeignKey(computador => computador.IDPlacaMae);
 
             HasRequired(computador => computador.Fonte)
-                .WithOptional(fonte => fonte.Computador);
+                .WithMany(fonte => fonte.Computadores)
+                .HasForeignKey(computador => computador.IDFonte);
 
             HasRequired(computador => computador.HD)
-                .WithOptional(hd => hd.Computador);
+                .WithMany(hd => hd.Computadores)
+                .HasForeignKey(computador => computador.IDHD);
 
             HasRequired(computador => computador.MemoriaRAM)
-                .WithOptional(memoriaRAM => memoriaRAM.Computador);
+                .WithMany(memoriaRAM => memoriaRAM.Computadores)
+                .HasForeignKey(computador => computador.IDMemoriaRAM);
 
             HasRequired(computador => computador.Processador)
-                .WithOptional(processador => processador.Computador);
+                .WithMany(processador => processador.Computadores)
+                .HasForeignKey(computador => computador.IDProcessador);
 
             #endregion
         }

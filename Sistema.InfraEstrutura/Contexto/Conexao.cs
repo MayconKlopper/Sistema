@@ -15,9 +15,10 @@ namespace Sistema.InfraEstrutura.Contexto
     public class Conexao : DbContext
     {
         public Conexao()
-            : base(ConfigurationManager.ConnectionStrings["Conexao"].ConnectionString)
+            //: base(ConfigurationManager.ConnectionStrings["Sistema"].ConnectionString)
+            : base(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\App_Data\BaseDados.mdf;Integrated Security = True")
         {
-
+            //Configuration.LazyLoadingEnabled = false;
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

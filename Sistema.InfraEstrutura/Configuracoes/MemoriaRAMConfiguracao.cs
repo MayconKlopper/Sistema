@@ -20,6 +20,10 @@ namespace Sistema.InfraEstrutura.Configuracoes
             Property(memoriaRAM => memoriaRAM.IDMemoriaRAM)
                 .HasColumnName("IDMemoriaRAM");
 
+            //Property(memoriaRAM => memoriaRAM.IDComputador)
+            //    .HasColumnName("IDComputador")
+            //    .IsRequired();
+
             Property(memoriaRAM => memoriaRAM.Quantidade)
                 .HasColumnName("Quantidade")
                 .IsRequired();
@@ -27,6 +31,9 @@ namespace Sistema.InfraEstrutura.Configuracoes
             Property(memoriaRAM => memoriaRAM.Capacidade)
                 .HasColumnName("Capacidade")
                 .IsRequired();
+
+            //HasRequired(memoriaRAM => memoriaRAM.Computadores)
+            //    .WithOptional(computador => computador.MemoriaRAM);
         }
     }
 }

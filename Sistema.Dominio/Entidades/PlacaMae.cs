@@ -9,12 +9,13 @@ namespace Sistema.Dominio.Entidades
     public class PlacaMae
     {
         public int IDPlacaMae { get; set; }
+        //public int IDComputador { get; set; }
         public string Modelo { get; set; }
         public string Marca { get; set; }
 
         #region Relacionamentos
 
-        public Computador Computador { get; set; }
+        public virtual List<Computador> Computadores { get; set; }
 
         #endregion
     }

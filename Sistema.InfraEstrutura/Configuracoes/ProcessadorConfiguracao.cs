@@ -20,6 +20,10 @@ namespace Sistema.InfraEstrutura.Configuracoes
             Property(processador => processador.IDProcessador)
                 .HasColumnName("IDProcessador");
 
+            //Property(processador => processador.IDComputador)
+            //    .HasColumnName("IDComputador")
+            //    .IsRequired();
+
             Property(processador => processador.Velocidade)
                 .HasColumnName("Velocidade")
                 .IsRequired();
@@ -31,6 +35,9 @@ namespace Sistema.InfraEstrutura.Configuracoes
             Property(processador => processador.Modelo)
                 .HasColumnName("Modelo")
                 .IsRequired();
+
+            //HasRequired(processador => processador.Computadores)
+            //    .WithOptional(computador => computador.Processador);
         }
     }
 }

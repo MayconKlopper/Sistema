@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Sistema.Dominio.Entidades;
 using System.Data.Entity.ModelConfiguration;
+using Sistema.InfraEstrutura.Extensoes;
 
 namespace Sistema.InfraEstrutura.Configuracoes
 {
@@ -20,6 +21,11 @@ namespace Sistema.InfraEstrutura.Configuracoes
             Property(fonte => fonte.IDFonte)
                 .HasColumnName("IDFonte");
 
+            //Property(fonte => fonte.IDComputador)
+            //    .HasColumnName("IDComputador")
+            //    .IsRequired()
+            //    .IsUnique();
+
             Property(fonte => fonte.Marca)
                 .HasColumnName("Marca")
                 .IsRequired();
@@ -27,6 +33,9 @@ namespace Sistema.InfraEstrutura.Configuracoes
             Property(fonte => fonte.Modelo)
                 .HasColumnName("Modelo")
                 .IsRequired();
+
+            //HasRequired(fonte => fonte.Computadores)
+            //    .WithOptional(computador => computador.Fonte); ;
         }
     }
 }

@@ -25,6 +25,7 @@ namespace Sistema.Dominio.Servicos
             {
                 repositorio.BeginTransaction();
                 repositorio.Insert(obj);
+                repositorio.Commit();
             }
             catch (Exception ex)
             {
@@ -39,6 +40,7 @@ namespace Sistema.Dominio.Servicos
             {
                 repositorio.BeginTransaction();
                 repositorio.Update(obj);
+                repositorio.Commit();
             }
             catch (Exception ex)
             {
@@ -53,6 +55,7 @@ namespace Sistema.Dominio.Servicos
             {
                 repositorio.BeginTransaction();
                 repositorio.Delete(obj);
+                repositorio.Commit();
             }
             catch (Exception ex)
             {

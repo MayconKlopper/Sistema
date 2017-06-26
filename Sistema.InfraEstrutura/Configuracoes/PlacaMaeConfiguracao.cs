@@ -21,6 +21,10 @@ namespace Sistema.InfraEstrutura.Configuracoes
             Property(placaMae => placaMae.IDPlacaMae)
                 .HasColumnName("IDPlacaMae");
 
+            //Property(placaMae => placaMae.IDComputador)
+            //    .HasColumnName("IDComputador")
+            //    .IsRequired();
+
             Property(placaMae => placaMae.Marca)
                 .HasColumnName("Marca")
                 .IsRequired();
@@ -28,6 +32,9 @@ namespace Sistema.InfraEstrutura.Configuracoes
             Property(placaMae => placaMae.Modelo)
                 .HasColumnName("Modelo")
                 .IsRequired();
+
+            //HasRequired(placaMae => placaMae.Computadores)
+            //    .WithOptional(computador => computador.PlacaMae);
         }
     }
 }

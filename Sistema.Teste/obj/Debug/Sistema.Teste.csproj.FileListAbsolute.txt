@@ -1,7 +1,13 @@
 C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Teste\bin\Debug\Sistema.Teste.dll
 C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Teste\bin\Debug\Sistema.Teste.pdb
-C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Teste\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Teste\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
 C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Teste\obj\Debug\Sistema.Teste.csprojResolveAssemblyReference.cache
 C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Teste\obj\Debug\Sistema.Teste.dll
 C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Teste\obj\Debug\Sistema.Teste.pdb
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Teste\bin\Debug\Sistema.Dominio.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Teste\bin\Debug\Sistema.InfraEstrutura.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Teste\bin\Debug\EntityFramework.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Teste\bin\Debug\Sistema.Dominio.pdb
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Teste\bin\Debug\Sistema.InfraEstrutura.pdb
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Teste\bin\Debug\EntityFramework.xml
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Teste\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Teste\bin\Debug\EntityFramework.SqlServer.xml

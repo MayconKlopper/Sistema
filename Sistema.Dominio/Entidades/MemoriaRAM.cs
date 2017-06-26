@@ -9,12 +9,13 @@ namespace Sistema.Dominio.Entidades
     public class MemoriaRAM
     {
         public int IDMemoriaRAM { get; set; }
+        //public int IDComputador { get; set; }
         public int Quantidade { get; set; }
         public string Capacidade { get; set; }
 
         #region Relacionamentos
 
-        public Computador Computador { get; set; }
+        public virtual List<Computador> Computadores { get; set; }
 
         #endregion
     }

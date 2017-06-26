@@ -48,7 +48,13 @@
     <Compile Include="Contratos\IAplicacaoServicoHD.cs" />
     <Compile Include="Contratos\IAplicacaoServicoProcessador.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicos\AplicacaoServicoComputador.cs" />
+    <Compile Include="Servicos\AplicacaoServicoFonte.cs" />
     <Compile Include="Servicos\AplicacaoServicoGenerico.cs" />
+    <Compile Include="Servicos\AplicacaoServicoHD.cs" />
+    <Compile Include="Servicos\AplicacaoServicoMemoriaRAM.cs" />
+    <Compile Include="Servicos\AplicacaoServicoPlacaMae.cs" />
+    <Compile Include="Servicos\AplicacaoServicoProcessador.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -3,3 +3,5 @@ C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Aplicacao\b
 C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Aplicacao\obj\Debug\Sistema.Aplicacao.csprojResolveAssemblyReference.cache
 C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Aplicacao\obj\Debug\Sistema.Aplicacao.dll
 C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Aplicacao\obj\Debug\Sistema.Aplicacao.pdb
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Aplicacao\bin\Debug\Sistema.Dominio.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Aplicacao\bin\Debug\Sistema.Dominio.pdb

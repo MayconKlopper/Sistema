@@ -18,11 +18,11 @@ namespace Sistema.Dominio.Entidades
 
         #region Relacionamentos
 
-        public PlacaMae PlacaMae { get; set; }
-        public MemoriaRAM MemoriaRAM { get; set; }
-        public HD HD { get; set; }
-        public Fonte Fonte { get; set; }
-        public Processador Processador { get; set; }
+        public virtual PlacaMae PlacaMae { get; set; }
+        public virtual MemoriaRAM MemoriaRAM { get; set; }
+        public virtual HD HD { get; set; }
+        public virtual Fonte Fonte { get; set; }
+        public virtual Processador Processador { get; set; }
 
         #endregion
     }

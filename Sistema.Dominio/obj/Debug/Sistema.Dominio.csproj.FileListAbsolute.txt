@@ -3,3 +3,7 @@ C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Dominio\bin
 C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Dominio\obj\Debug\Sistema.Dominio.dll
 C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Dominio\obj\Debug\Sistema.Dominio.pdb
 C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Dominio\obj\Debug\Sistema.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Dominio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Dominio\bin\Debug\EntityFramework.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Dominio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Dominio\bin\Debug\EntityFramework.xml
