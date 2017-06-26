@@ -1,0 +1,42 @@
+﻿@model Sistema.Apresentacao.Models.MemoriaRAMViewModelLista
+
+@{
+    ViewBag.Title = "ListarMemoriaRAM";
+}
+
+<h2>ListarMemoriaRAM</h2>
+
+<div>
+    <h4>MemoriaRAMViewModelLista</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IDMemoriaRAM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDMemoriaRAM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Capacidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Capacidade)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "EditarMemoriaRAM", new { id = Model.IDMemoriaRAM }) |
+    @Html.ActionLink("Voltar para Lista de Computadores", "Index")
+</p>

@@ -1,0 +1,42 @@
+﻿@model Sistema.Apresentacao.Models.PlacaMaeViewModelLista
+
+@{
+    ViewBag.Title = "ListarPlacaMae";
+}
+
+<h2>ListarPlacaMae</h2>
+
+<div>
+    <h4>PlacaMaeViewModelLista</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IDPlacaMae)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDPlacaMae)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "EditarPlacaMae", new { id = Model.IDPlacaMae }) |
+    @Html.ActionLink("Voltar para Lista de Computadores", "Index")
+</p>

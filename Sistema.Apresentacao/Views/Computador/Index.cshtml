@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Sistema.Apresentacao.Models.ComputadorViewModelLista>
+
+@{
+    ViewBag.Title = "Lista de Computadores";
+}
+
+<h1></h1>
+
+<div class="panel panel-info">
+    <div class="panel-heading"><h4 class="panel-title" style="text-align: center;">Lista de Computadores</h4></div>
+    <div class="panel-body">
+
+        <p>
+            @Html.ActionLink("Adicionar Novo Computador", "CriarComputador")
+        </p>
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.IDComputador)
+                </th>
+                <th>
+                    @Html.DisplayName("Dados da Fonte")
+                </th>
+                <th>
+                    @Html.DisplayName("Dados do(s) HD(s)")
+                </th>
+                <th>
+                    @Html.DisplayName("Dados da(s) Memória(s) RAM(s)")
+                </th>
+                <th>
+                    @Html.DisplayName("Dados da Placa Mãe")
+                </th>
+                <th>
+                    @Html.DisplayName("Dados do Processador")
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDComputador)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Exibir", "ListarFonte", new { id = item.IDFonte })
+                    </td>
+                    <td>
+                        @Html.ActionLink("Exibir", "ListarHD", new { id = item.IDHD })
+                    </td>
+                    <td>
+                        @Html.ActionLink("Exibir", "ListarMemoriaRAM", new { id = item.IDMemoriaRAM })
+                    </td>
+                    <td>
+                        @Html.ActionLink("Exibir", "ListarPlacaMae", new { id = item.IDPlacaMae })
+                    </td>
+                    <td>
+                        @Html.ActionLink("Exibir", "ListarProcessador", new { id = item.IDProcessador })
+                    </td>
+                </tr>
+            }
+
+        </table>
+
+    </div>
+</div>

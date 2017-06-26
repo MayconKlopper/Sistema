@@ -1,0 +1,50 @@
+﻿@model Sistema.Apresentacao.Models.ProcessadorViewModelLista
+
+@{
+    ViewBag.Title = "ListarProcessador";
+}
+
+<h2>ListarProcessador</h2>
+
+<div>
+    <h4>ProcessadorViewModelLista</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IDProcessador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDProcessador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Velocidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Velocidade)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "EditarProcessador", new { id = Model.IDProcessador }) |
+    @Html.ActionLink("Voltar para Lista de Computadores", "Index")
+</p>

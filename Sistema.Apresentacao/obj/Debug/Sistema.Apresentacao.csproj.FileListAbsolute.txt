@@ -86,3 +86,14 @@ C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentaca
 C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\bin\Sistema.Dominio.pdb
 C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\bin\Sistema.InfraEstrutura.pdb
 C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\bin\Sistema.Utilidades.pdb
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\bin\AutoMapper.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\bin\Ninject.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\bin\Ninject.Web.Common.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\bin\Ninject.Web.Mvc.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\bin\Sistema.Aplicacao.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\bin\WebActivatorEx.dll
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\bin\Sistema.Aplicacao.pdb
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\bin\AutoMapper.xml
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\bin\Ninject.xml
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\bin\Ninject.Web.Common.xml
+C:\Users\mayco\documents\visual studio 2015\Projects\Sistema\Sistema.Apresentacao\bin\Ninject.Web.Mvc.xml

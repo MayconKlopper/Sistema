@@ -1,0 +1,42 @@
+﻿@model Sistema.Apresentacao.Models.FonteViewModelLista
+
+@{
+    ViewBag.Title = "ListarFonte";
+}
+
+<h2>ListarFonte</h2>
+
+<div>
+    <h4>FonteViewModelLista</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IDFonte)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDFonte)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "EditarFonte", new { id = Model.IDFonte }) |
+    @Html.ActionLink("Voltar para Lista de Computadores", "Index")
+</p>

@@ -1,0 +1,42 @@
+﻿@model Sistema.Apresentacao.Models.HDViewModelLista
+
+@{
+    ViewBag.Title = "ListarHD";
+}
+
+<h2>ListarHD</h2>
+
+<div>
+    <h4>HDViewModelLista</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IDHD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDHD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Capacidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Capacidade)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "EditarHD", new { id = Model.IDHD }) |
+    @Html.ActionLink("Voltar para Lista de Computadores", "Index")
+</p>
