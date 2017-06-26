@@ -10,6 +10,6 @@ namespace Sistema.Dominio.Contratos.Repositorios
 {
     public interface IRepositorioComputador : IRepositorioGenerico<Computador>
     {
-
+        List<Computador> FindByIDUsuario(string ID);
     }
 }

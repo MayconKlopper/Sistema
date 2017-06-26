@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using Microsoft.AspNet.Identity;
 using Sistema.Aplicacao.Contratos;
 using Sistema.Apresentacao.Models;
 using Sistema.Dominio.Entidades;
@@ -43,13 +44,13 @@ namespace Sistema.Apresentacao.Controllers
         // GET: Computador
         public ActionResult Index()
         {
-            List<Computador> computadores = servicoComputador.RetornaTodos();
+            List<Computador> computadores = servicoComputador.RetornarPorIDUsuario(User.Identity.GetUserId());
             List<ComputadorViewModelLista> computadoresViewModelListar = new List<ComputadorViewModelLista>();
 
             foreach (Computador computador in computadores)
             {
                 ComputadorViewModelLista computadorViewModelListar = Mapper.Map<ComputadorViewModelLista>(computador);
-
+                
                 computadoresViewModelListar.Add(computadorViewModelListar);
             }
 
@@ -69,6 +70,8 @@ namespace Sistema.Apresentacao.Controllers
             try
             {
                 Computador computador = Mapper.Map<Computador>(computadorViewModelCria);
+                computador.IDUsuario = User.Identity.GetUserId();
+
                 computador.Fonte = Mapper.Map<Fonte>(computadorViewModelCria);
                 computador.MemoriaRAM = Mapper.Map<MemoriaRAM>(computadorViewModelCria);
                 computador.PlacaMae = Mapper.Map<PlacaMae>(computadorViewModelCria);

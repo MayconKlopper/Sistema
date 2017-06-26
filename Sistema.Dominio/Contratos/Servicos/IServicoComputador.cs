@@ -10,6 +10,6 @@ namespace Sistema.Dominio.Contratos.Servicos
 {
     public interface IServicoComputador : IServicoGenerico<Computador>
     {
-
+        List<Computador> RetornarPorIDUsuario(string ID);
     }
 }

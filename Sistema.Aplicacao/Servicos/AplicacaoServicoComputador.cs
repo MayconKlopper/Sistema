@@ -19,5 +19,10 @@ namespace Sistema.Aplicacao.Servicos
         {
             this.servico = servico;
         }
+
+        public List<Computador> RetornarPorIDUsuario(string ID)
+        {
+            return servico.RetornarPorIDUsuario(ID);
+        }
     }
 }

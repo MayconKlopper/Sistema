@@ -19,5 +19,17 @@ namespace Sistema.Dominio.Servicos
         {
             this.repositorio = repositorio;
         }
+
+        public List<Computador> RetornarPorIDUsuario(string ID)
+        {
+            try
+            {
+                return repositorio.FindByIDUsuario(ID);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

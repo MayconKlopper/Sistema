@@ -11,6 +11,9 @@ namespace Sistema.InfraEstrutura.Repositorios
 {
     public class RepositorioComputador : RepositorioGenerico<Computador>, IRepositorioComputador
     {
-
+        public List<Computador> FindByIDUsuario(string ID)
+        {
+            return conexao.Set<Computador>().Where(computador => computador.IDUsuario.Equals(ID)).ToList();
+        }
     }
 }

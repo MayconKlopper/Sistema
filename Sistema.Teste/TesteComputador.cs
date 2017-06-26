@@ -98,5 +98,20 @@ namespace Sistema.Teste
                 Assert.Fail(ex.Message);
             }
         }
+
+        [TestMethod]
+        public void RetornarPorIDUsuario()
+        {
+            try
+            {
+                List<Computador> computadores = new List<Computador>();
+
+                computadores = servico.RetornarPorIDUsuario("35b889eb-513a-431f-a212-3b02acb8d3a6");
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+        }
     }
 }

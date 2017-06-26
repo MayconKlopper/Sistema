@@ -10,5 +10,6 @@ namespace Sistema.Aplicacao.Contratos
 {
     public interface IAplicacaoServicoComputador : IAplicacaoServicoGenerico<Computador>
     {
+        List<Computador> RetornarPorIDUsuario(string ID);
     }
 }
