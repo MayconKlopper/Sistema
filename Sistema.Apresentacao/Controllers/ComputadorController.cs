@@ -42,7 +42,22 @@ namespace Sistema.Apresentacao.Controllers
         #region Computador
 
         // GET: Computador
-        public ActionResult Index()
+        //public ActionResult Index()
+        //{
+        //    List<Computador> computadores = servicoComputador.RetornarPorIDUsuario(User.Identity.GetUserId());
+        //    List<ComputadorViewModelLista> computadoresViewModelListar = new List<ComputadorViewModelLista>();
+
+        //    foreach (Computador computador in computadores)
+        //    {
+        //        ComputadorViewModelLista computadorViewModelListar = Mapper.Map<ComputadorViewModelLista>(computador);
+
+        //        computadoresViewModelListar.Add(computadorViewModelListar);
+        //    }
+
+        //    return View(computadoresViewModelListar);
+        //}
+
+        public ViewResult Index(string ordem, string busca)
         {
             List<Computador> computadores = servicoComputador.RetornarPorIDUsuario(User.Identity.GetUserId());
             List<ComputadorViewModelLista> computadoresViewModelListar = new List<ComputadorViewModelLista>();
@@ -50,8 +65,31 @@ namespace Sistema.Apresentacao.Controllers
             foreach (Computador computador in computadores)
             {
                 ComputadorViewModelLista computadorViewModelListar = Mapper.Map<ComputadorViewModelLista>(computador);
-                
+
                 computadoresViewModelListar.Add(computadorViewModelListar);
+            }
+
+            if (! String.IsNullOrEmpty(busca))
+            {
+                computadoresViewModelListar = computadoresViewModelListar.Where(c => c.DataCriacao.Equals(busca)).ToList();
+            }
+
+            ViewBag.DataCricao = "DataCriacao";
+            ViewBag.IDComputador = "IDComputador";
+
+            switch (ordem)
+            {
+                case "DataCriacao":
+                    computadoresViewModelListar = computadoresViewModelListar.OrderBy(c => c.DataCriacao).ToList();
+                    break;
+
+                case "IDComputador":
+                    computadoresViewModelListar = computadoresViewModelListar.OrderByDescending(c => c.IDComputador).ToList();
+                    break;
+
+                default:
+                    break;
+
             }
 
             return View(computadoresViewModelListar);
@@ -71,6 +109,7 @@ namespace Sistema.Apresentacao.Controllers
             {
                 Computador computador = new Computador();
                 computador.IDUsuario = User.Identity.GetUserId();
+                //computador.DataCriacao = DateTime.Now;
 
                 computador.Fonte = Mapper.Map<Fonte>(computadorViewModelCria);
                 computador.HD = Mapper.Map<HD>(computadorViewModelCria);
@@ -108,13 +147,7 @@ namespace Sistema.Apresentacao.Controllers
         {
             try
             {
-                Computador computador = new Computador();
-                computador.IDComputador = computadorViewModelExclui.IDComputador;
-                computador.IDFonte = computadorViewModelExclui.IDFonte;
-                computador.IDHD = computadorViewModelExclui.IDHD;
-                computador.IDMemoriaRAM = computadorViewModelExclui.IDMemoriaRAM;
-                computador.IDPlacaMae = computadorViewModelExclui.IDPlacaMae;
-                computador.IDProcessador = computadorViewModelExclui.IDProcessador;
+                Computador computador = Mapper.Map<Computador>(computadorViewModelExclui);
 
                 Fonte fonte = Mapper.Map<Fonte>(computadorViewModelExclui);
                 HD hd = Mapper.Map<HD>(computadorViewModelExclui);

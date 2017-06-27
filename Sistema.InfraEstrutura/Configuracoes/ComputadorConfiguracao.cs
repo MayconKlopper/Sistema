@@ -21,6 +21,9 @@ namespace Sistema.InfraEstrutura.Configuracoes
                 .HasColumnName("IDComputador")
                 .IsRequired();
 
+            Property(computador => computador.DataCriacao)
+                .HasColumnName("DataCriacao");
+
             Property(computador => computador.IDFonte)
                 .HasColumnName("IDFonte")
                 .IsRequired();

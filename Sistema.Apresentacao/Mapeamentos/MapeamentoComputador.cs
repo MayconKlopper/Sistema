@@ -15,6 +15,7 @@ namespace Sistema.Apresentacao.Mapeamentos
         {
             CreateMap<Computador, ComputadorViewModelLista>()
                 .ForMember(computadorViewModelLista => computadorViewModelLista.IDComputador, configuracaoMembro => configuracaoMembro.MapFrom(computador => computador.IDComputador))
+                .ForMember(computadorViewModelLista => computadorViewModelLista.DataCriacao, configuracaoMembro => configuracaoMembro.MapFrom(computador => String.Format("{0:d}", computador.DataCriacao)))
                 .ForMember(computadorViewModelLista => computadorViewModelLista.IDFonte, configuracaoMembro => configuracaoMembro.MapFrom(computador => computador.Fonte.IDFonte))
                 .ForMember(computadorViewModelLista => computadorViewModelLista.IDHD, configuracaoMembro => configuracaoMembro.MapFrom(computador => computador.HD.IDHD))
                 .ForMember(computadorViewModelLista => computadorViewModelLista.IDMemoriaRAM, configuracaoMembro => configuracaoMembro.MapFrom(computador => computador.MemoriaRAM.IDMemoriaRAM))
@@ -51,6 +52,9 @@ namespace Sistema.Apresentacao.Mapeamentos
 
 
             CreateMap<Computador, ComputadorViewModelExclui>()
+                .ForMember(computadorViewModelExclui => computadorViewModelExclui.IDComputador, configuracaoMembro => configuracaoMembro.MapFrom(computador => computador.IDComputador))
+                .ForMember(computadorViewModelExclui => computadorViewModelExclui.DataCriacao, configuracaoMembro => configuracaoMembro.MapFrom(computador => String.Format("{0:d}", computador.DataCriacao)))
+
                 .ForMember(computadorViewModelExclui => computadorViewModelExclui.IDFonte, configuracaoMembro => configuracaoMembro.MapFrom(computador => computador.Fonte.IDFonte))
                 .ForMember(computadorViewModelExclui => computadorViewModelExclui.MarcaFonte, configuracaoMembro => configuracaoMembro.MapFrom(computador => computador.Fonte.Marca))
                 .ForMember(computadorViewModelExclui => computadorViewModelExclui.ModeloFonte, configuracaoMembro => configuracaoMembro.MapFrom(computador => computador.Fonte.Modelo))
@@ -71,6 +75,16 @@ namespace Sistema.Apresentacao.Mapeamentos
                 .ForMember(computadorViewModelExclui => computadorViewModelExclui.MarcaProcessador, configuracaoMembro => configuracaoMembro.MapFrom(computador => computador.Processador.Marca))
                 .ForMember(computadorViewModelExclui => computadorViewModelExclui.ModeloProcessador, configuracaoMembro => configuracaoMembro.MapFrom(computador => computador.Processador.Modelo))
                 .ForMember(computadorViewModelExclui => computadorViewModelExclui.VelocidadeProcessador, configuracaoMembro => configuracaoMembro.MapFrom(computador => computador.Processador.Velocidade))
+                ;
+
+            CreateMap<ComputadorViewModelExclui, Computador>()
+                .ForMember(computador => computador.IDComputador, configuracaoMembro => configuracaoMembro.MapFrom(computadorViewModelExclui => computadorViewModelExclui.IDComputador))
+                .ForMember(computador => computador.DataCriacao, configuracaoMembro => configuracaoMembro.MapFrom(computadorViewModelExclui => Convert.ToDateTime(computadorViewModelExclui.DataCriacao)))
+                .ForMember(computador => computador.IDFonte, configuracaoMembro => configuracaoMembro.MapFrom(computadorViewModelExclui => computadorViewModelExclui.IDFonte))
+                .ForMember(computador => computador.IDHD, configuracaoMembro => configuracaoMembro.MapFrom(computadorViewModelExclui => computadorViewModelExclui.IDHD))
+                .ForMember(computador => computador.IDMemoriaRAM, configuracaoMembro => configuracaoMembro.MapFrom(computadorViewModelExclui => computadorViewModelExclui.IDMemoriaRAM))
+                .ForMember(computador => computador.IDPlacaMae, configuracaoMembro => configuracaoMembro.MapFrom(computadorViewModelExclui => computadorViewModelExclui.IDPlacaMae))
+                .ForMember(computador => computador.IDProcessador, configuracaoMembro => configuracaoMembro.MapFrom(computadorViewModelExclui => computadorViewModelExclui.IDProcessador))
                 ;
 
             CreateMap<ComputadorViewModelExclui, Fonte>()

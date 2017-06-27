@@ -26,6 +26,7 @@ namespace Sistema.Teste
             try
             {
                 Computador computador = new Computador();
+                computador.DataCriacao = DateTime.Now;
                 computador.IDFonte = 1;
                 computador.IDHD = 1;
                 computador.IDMemoriaRAM = 1;
@@ -47,6 +48,7 @@ namespace Sistema.Teste
             try
             {
                 Computador computador = new Computador();
+                computador.DataCriacao = DateTime.Now;
                 computador.IDUsuario = "35b889eb-513a-431f-a212-3b02acb8d3a6";
 
                 Fonte fonte = new Fonte();

@@ -25,10 +25,25 @@
             @Html.ActionLink("Adicionar Novo Computador", "CriarComputador", null, new { @class = "btn btn-primary" })
         </p>
 
+        @using (Html.BeginForm())
+        {
+            @*<p>Busca por <b> Data de criação do computador</b></p>*@
+            @Html.Label("Busca por Data de criação do computador", new { @class = "label-control" })
+            <div class="form-inline">
+                @Html.TextBox("busca", null, new { @class = "form-control", @placeholder = "27/06/2017" })
+                <input type="submit" value="Buscar" class="btn btn-primary" />
+            </div>
+
+            <h1></h1>
+        }
+
         <table class="table">
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.IDComputador)
+                    @Html.ActionLink("Código do computador", "index", new { ordem = ViewBag.IDComputador })
+                </th>
+                <th>
+                    @Html.ActionLink("Data de criação do Computador", "index", new { ordem = ViewBag.DataCricao })
                 </th>
                 <th>
                     @Html.DisplayName("Dados da Fonte")
@@ -55,6 +70,9 @@
                 <tr>
                     <td>
                         @Html.DisplayFor(modelItem => item.IDComputador)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataCriacao)
                     </td>
                     <td>
                         @Html.ActionLink("Exibir", "ListarFonte", new { id = item.IDFonte }, new { @class = "btn btn-primary" })

@@ -10,6 +10,8 @@ namespace Sistema.Apresentacao.Models
     {
         [Display(Name = "Código do computador")]
         public int IDComputador { get; set; }
+        [Display(Name = "Data de criação do Computador")]
+        public string DataCriacao { get; set; }
 
         public int IDFonte { get; set; }
         public int IDHD { get; set; }
@@ -52,6 +54,8 @@ namespace Sistema.Apresentacao.Models
     {
         [Display(Name = "Código do Computador: ")]
         public int IDComputador { get; set; }
+        [Display(Name = "data de criação do Computador")]
+        public string DataCriacao { get; set; }
 
         [Display(Name = "Código: ")]
         public int IDFonte { get; set; }

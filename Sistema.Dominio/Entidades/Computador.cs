@@ -9,6 +9,7 @@ namespace Sistema.Dominio.Entidades
     public class Computador
     {
         public int IDComputador { get; set; }
+        public DateTime DataCriacao { get; set; }
         public int IDPlacaMae { get; set; }
         public int IDMemoriaRAM { get; set; }
         public int IDHD { get; set; }
