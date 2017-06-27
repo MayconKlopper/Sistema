@@ -38,6 +38,38 @@ namespace Sistema.Teste
         }
 
         [TestMethod]
+        public void Atualizar()
+        {
+            try
+            {
+                PlacaMae placaMae = servico.RetornarPorID(1);
+                placaMae.Marca = "GIgabyte";
+                placaMae.Modelo = "GA-H61M-S1";
+
+                servico.Atualizar(placaMae);
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+        }
+
+        [TestMethod]
+        public void Deletar()
+        {
+            try
+            {
+                PlacaMae placaMae = servico.RetornarPorID(1);
+
+                servico.Deletar(placaMae);
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+        }
+
+        [TestMethod]
         public void RetornarTodos()
         {
             try
@@ -45,6 +77,30 @@ namespace Sistema.Teste
                 List<PlacaMae> placaMaes = new List<PlacaMae>();
 
                 placaMaes = servico.RetornarTodos();
+
+                foreach (PlacaMae placaMae in placaMaes)
+                {
+                    Assert.IsNotNull(placaMae.IDPlacaMae, "O campo IDPlacaMae está vazio");
+                    Assert.IsNotNull(placaMae.Marca, "O campo Marca está vazio");
+                    Assert.IsNotNull(placaMae.Modelo, "O campo Modelo está vazio");
+                }
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+        }
+
+        [TestMethod]
+        public void RetornarPorID()
+        {
+            try
+            {
+                PlacaMae placaMae = servico.RetornarPorID(1);
+
+                Assert.IsNotNull(placaMae.IDPlacaMae, "O campo IDPlacaMae está vazio");
+                Assert.IsNotNull(placaMae.Marca, "O campo Marca está vazio");
+                Assert.IsNotNull(placaMae.Modelo, "O campo Modelo está vazio");
             }
             catch (Exception ex)
             {

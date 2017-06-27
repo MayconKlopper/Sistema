@@ -39,6 +39,39 @@ namespace Sistema.Teste
         }
 
         [TestMethod]
+        public void Atualizar()
+        {
+            try
+            {
+                Processador processador = servico.RetornarPorID(1);
+                processador.Marca = "Radeon";
+                processador.Modelo = "AMD A10";
+                processador.Velocidade = "3.6GHz";
+
+                servico.Atualizar(processador);
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+        }
+
+        [TestMethod]
+        public void Deletar()
+        {
+            try
+            {
+                Processador processador = servico.RetornarPorID(1);
+
+                servico.Deletar(processador);
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+        }
+
+        [TestMethod]
         public void RetornarTodos()
         {
             try
@@ -46,6 +79,32 @@ namespace Sistema.Teste
                 List<Processador> processadores = new List<Processador>();
 
                 processadores = servico.RetornarTodos();
+
+                foreach (Processador processador in processadores)
+                {
+                    Assert.IsNotNull(processador.IDProcessador, "O campo IDProcessador está vazio");
+                    Assert.IsNotNull(processador.Marca, "O campo Marca está vazio");
+                    Assert.IsNotNull(processador.Modelo, "O campo Modelo está vazio");
+                    Assert.IsNotNull(processador.Velocidade, "O campo Velocidade está vazio");
+                }
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+        }
+
+        [TestMethod]
+        public void RetornarPorID()
+        {
+            try
+            {
+                Processador processador = servico.RetornarPorID(1);
+
+                Assert.IsNotNull(processador.IDProcessador, "O campo IDProcessador está vazio");
+                Assert.IsNotNull(processador.Marca, "O campo Marca está vazio");
+                Assert.IsNotNull(processador.Modelo, "O campo Modelo está vazio");
+                Assert.IsNotNull(processador.Velocidade, "O campo Velocidade está vazio");
             }
             catch (Exception ex)
             {

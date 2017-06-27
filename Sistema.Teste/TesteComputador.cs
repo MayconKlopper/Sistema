@@ -85,6 +85,21 @@ namespace Sistema.Teste
         }
 
         [TestMethod]
+        public void Deletar()
+        {
+            try
+            {
+                Computador computador = servico.RetornarPorID(5);
+
+                servico.Deletar(computador);
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+        }
+
+        [TestMethod]
         public void RetornarTodos()
         {
             try
@@ -92,6 +107,22 @@ namespace Sistema.Teste
                 List<Computador> computadores = new List<Computador>();
 
                 computadores = servico.RetornarTodos();
+
+                if (computadores.Count == 0)
+                {
+                    Assert.Fail("método não retornou nenhum objeto");
+                }
+
+                foreach (Computador computador in computadores)
+                {
+                    Assert.IsNotNull(computador.IDComputador, "O campo IDComputador está vazio");
+                    Assert.IsNotNull(computador.IDFonte, "O campo IDFonte está vazio");
+                    Assert.IsNotNull(computador.IDHD, "O campo IDHD está vazio");
+                    Assert.IsNotNull(computador.IDMemoriaRAM, "O campo IDMemoriaRAM está vazio");
+                    Assert.IsNotNull(computador.IDPlacaMae, "O campo IDPlacaMae está vazio");
+                    Assert.IsNotNull(computador.IDProcessador, "O campo IDProcessador está vazio");
+                    Assert.IsNotNull(computador.IDUsuario, "O campo IDUsuario está vazio");
+                }
             }
             catch (Exception ex)
             {
@@ -107,6 +138,45 @@ namespace Sistema.Teste
                 List<Computador> computadores = new List<Computador>();
 
                 computadores = servico.RetornarPorIDUsuario("35b889eb-513a-431f-a212-3b02acb8d3a6");
+
+                if (computadores.Count == 0)
+                {
+                    Assert.Fail("método não retornou nenhum objeto");
+                }
+
+                foreach (Computador computador in computadores)
+                {
+                    Assert.IsNotNull(computador.IDComputador, "O campo IDComputador está vazio");
+                    Assert.IsNotNull(computador.IDFonte, "O campo IDFonte está vazio");
+                    Assert.IsNotNull(computador.IDHD, "O campo IDHD está vazio");
+                    Assert.IsNotNull(computador.IDMemoriaRAM, "O campo IDMemoriaRAM está vazio");
+                    Assert.IsNotNull(computador.IDPlacaMae, "O campo IDPlacaMae está vazio");
+                    Assert.IsNotNull(computador.IDProcessador, "O campo IDProcessador está vazio");
+                    Assert.IsNotNull(computador.IDUsuario, "O campo IDUsuario está vazio");
+                }
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+        }
+
+        [TestMethod]
+        public void RetornarPorID()
+        {
+            try
+            {
+                Computador computador = new Computador();
+
+                computador = servico.RetornarPorID(4);
+
+                Assert.IsNotNull(computador.IDComputador, "O campo IDComputador está vazio");
+                Assert.IsNotNull(computador.IDFonte, "O campo IDFonte está vazio");
+                Assert.IsNotNull(computador.IDHD, "O campo IDHD está vazio");
+                Assert.IsNotNull(computador.IDMemoriaRAM, "O campo IDMemoriaRAM está vazio");
+                Assert.IsNotNull(computador.IDPlacaMae, "O campo IDPlacaMae está vazio");
+                Assert.IsNotNull(computador.IDProcessador, "O campo IDProcessador está vazio");
+                Assert.IsNotNull(computador.IDUsuario, "O campo IDUsuario está vazio");
             }
             catch (Exception ex)
             {

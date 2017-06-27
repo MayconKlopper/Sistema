@@ -38,6 +38,38 @@ namespace Sistema.Teste
         }
 
         [TestMethod]
+        public void Atualizar()
+        {
+            try
+            {
+                MemoriaRAM memoriaRAM = servico.RetornarPorID(1);
+                memoriaRAM.Quantidade = 2;
+                memoriaRAM.Capacidade = "4GB";
+
+                servico.Atualizar(memoriaRAM);
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+        }
+
+        [TestMethod]
+        public void Deletar()
+        {
+            try
+            {
+                MemoriaRAM memoriaRAM = servico.RetornarPorID(1);
+
+                servico.Deletar(memoriaRAM);
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+        }
+
+        [TestMethod]
         public void RetornarTodos()
         {
             try
@@ -45,6 +77,32 @@ namespace Sistema.Teste
                 List<MemoriaRAM> memoriaRAMs = new List<MemoriaRAM>();
 
                 memoriaRAMs = servico.RetornarTodos();
+
+                foreach (MemoriaRAM memoriaRAM in memoriaRAMs)
+                {
+                    Assert.IsNotNull(memoriaRAM.IDMemoriaRAM, "O campo IDMemoriaRAM está vazio");
+                    Assert.IsNotNull(memoriaRAM.Quantidade, "O campo Quantidade está vazio");
+                    Assert.IsNotNull(memoriaRAM.Capacidade, "O campo Capacidade está vazio");
+                }
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+        }
+
+        [TestMethod]
+        public void RetornarPorID()
+        {
+            try
+            {
+                MemoriaRAM memoriaRAM = new MemoriaRAM();
+
+                memoriaRAM = servico.RetornarPorID(1);
+
+                Assert.IsNotNull(memoriaRAM.IDMemoriaRAM, "O campo IDMemoriaRAM está vazio");
+                Assert.IsNotNull(memoriaRAM.Quantidade, "O campo Quantidade está vazio");
+                Assert.IsNotNull(memoriaRAM.Capacidade, "O campo Capacidade está vazio");
             }
             catch (Exception ex)
             {
