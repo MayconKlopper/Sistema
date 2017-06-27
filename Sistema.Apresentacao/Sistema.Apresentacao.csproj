@@ -302,7 +302,6 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Computador\Index.cshtml" />
-    <Content Include="Views\Computador\CriarComputador.cshtml" />
     <Content Include="Views\Computador\EditarFonte.cshtml" />
     <Content Include="Views\Computador\ListarHD.cshtml" />
     <Content Include="Views\Computador\EditarHD.cshtml" />
@@ -314,6 +313,7 @@
     <Content Include="Views\Computador\EditarProcessador.cshtml" />
     <Content Include="Views\Computador\ListarFonte.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Computador\CriarComputador.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sistema.Aplicacao\Sistema.Aplicacao.csproj">

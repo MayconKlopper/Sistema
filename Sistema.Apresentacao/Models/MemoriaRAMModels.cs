@@ -9,20 +9,25 @@ namespace Sistema.Apresentacao.Models
 {
     public class MemoriaRAMViewModelLista
     {
-        [Display(Name = "Código da(s) Memória(s) RAM(s)")]
+        [Display(Name = "Código do Computador: ")]
+        public int IDComputador { get; set; }
+        [Display(Name = "Código: ")]
         public int IDMemoriaRAM { get; set; }
-        [Display(Name = "Quantidade de Memórias RAMs")]
+        [Display(Name = "Quantidade")]
         public int Quantidade { get; set; }
-        [Display(Name = "capacidade da(s) Memória(s) RAM(s)")]
+        [Display(Name = "capacidade")]
         public string Capacidade { get; set; }
     }
 
     public class MemoriaRAMViewModelEdita
     {
+        [Display(Name = "Código do Computador: ")]
+        public int IDComputador { get; set; }
+        [Display(Name = "Código: ")]
         public int IDMemoriaRAM { get; set; }
-        [Display(Name = "Quantidade de Memórias RAMs")]
+        [Display(Name = "Quantidade")]
         public int Quantidade { get; set; }
-        [Display(Name = "capacidade da(s) Memória(s) RAM(s)")]
+        [Display(Name = "capacidade")]
         public string Capacidade { get; set; }
     }
 }

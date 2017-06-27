@@ -22,10 +22,6 @@ namespace Sistema.Apresentacao.Mapeamentos
                 .ForMember(computadorViewModelLista => computadorViewModelLista.IDProcessador, configuracaoMembro => configuracaoMembro.MapFrom(computador => computador.Processador.IDProcessador))
                 ;
 
-            CreateMap<ComputadorViewModelCria, Computador>()
-                .ForMember(computador => computador.IDComputador, configuracaoMembro => configuracaoMembro.MapFrom(computadorViewModelCria => computadorViewModelCria.IDComputador))
-                ;
-
             CreateMap<ComputadorViewModelCria, Fonte>()
                 .ForMember(fonte => fonte.Marca, configuracaoMembro => configuracaoMembro.MapFrom(computadorViewModelCria => computadorViewModelCria.MarcaFonte))
                 .ForMember(fonte => fonte.Modelo, configuracaoMembro => configuracaoMembro.MapFrom(computadorViewModelCria => computadorViewModelCria.ModeloFonte))

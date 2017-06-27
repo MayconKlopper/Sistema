@@ -23,6 +23,8 @@ namespace Sistema.Apresentacao.Mapeamentos
                 .ForMember(memoriaRAM => memoriaRAM.IDMemoriaRAM, configuracaoMembro => configuracaoMembro.MapFrom(memoriaRAMViewModelLista => memoriaRAMViewModelLista.IDMemoriaRAM))
                 .ForMember(memoriaRAM => memoriaRAM.Quantidade, configuracaoMembro => configuracaoMembro.MapFrom(memoriaRAMViewModelLista => memoriaRAMViewModelLista.Quantidade))
                 .ForMember(memoriaRAM => memoriaRAM.Capacidade, configuracaoMembro => configuracaoMembro.MapFrom(memoriaRAMViewModelLista => memoriaRAMViewModelLista.Capacidade))
+
+                //.ForMember(memoriaRAM => memoriaRAM.Computadores[0].IDComputador, configuracaoMembro => configuracaoMembro.MapFrom(memoriaRAMViewModelLista => memoriaRAMViewModelLista.IDComputador))
                 ;
 
             CreateMap<MemoriaRAM, MemoriaRAMViewModelEdita>()
@@ -35,6 +37,8 @@ namespace Sistema.Apresentacao.Mapeamentos
                 .ForMember(memoriaRAM => memoriaRAM.IDMemoriaRAM, configuracaoMembro => configuracaoMembro.MapFrom(memoriaRAMViewModelEdita => memoriaRAMViewModelEdita.IDMemoriaRAM))
                 .ForMember(memoriaRAM => memoriaRAM.Quantidade, configuracaoMembro => configuracaoMembro.MapFrom(memoriaRAMViewModelEdita => memoriaRAMViewModelEdita.Quantidade))
                 .ForMember(memoriaRAM => memoriaRAM.Capacidade, configuracaoMembro => configuracaoMembro.MapFrom(memoriaRAMViewModelEdita => memoriaRAMViewModelEdita.Capacidade))
+
+                //.ForMember(memoriaRAM => memoriaRAM.Computadores[0].IDComputador, configuracaoMembro => configuracaoMembro.MapFrom(memoriaRAMViewModelEdita => memoriaRAMViewModelEdita.IDComputador))
                 ;
         }
     }

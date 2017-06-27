@@ -20,34 +20,31 @@ namespace Sistema.Apresentacao.Models
 
     public class ComputadorViewModelCria
     {
-        [Display(Name = "Código do computador")]
-        public int IDComputador { get; set; }
-
-        [Display(Name = "Marca da fonte")]
+        [Display(Name = "Marca")]
         public string MarcaFonte { get; set; }
-        [Display(Name = "Modelo da fonte")]
+        [Display(Name = "Modelo")]
         public string ModeloFonte { get; set; }
 
-        [Display(Name = "Quantidade de Hard Discs (HDs)")]
+        [Display(Name = "Quantidade")]
         public int QuantidadeHD { get; set; }
-        [Display(Name = "Capacidade do(s) Hard Disc(s) (HD(s))")]
+        [Display(Name = "Capacidade")]
         public string CapacidadeHD { get; set; }
 
-        [Display(Name = "Quantidade de Memórias RAMs")]
+        [Display(Name = "Quantidade")]
         public int QuantidadeMemoriaRAM { get; set; }
-        [Display(Name = "capacidade da(s) Memória(s) RAM(s)")]
+        [Display(Name = "capacidade")]
         public string CapacidadeMemoriaRAM { get; set; }
 
-        [Display(Name = "Marca da placa mãe")]
+        [Display(Name = "Marca")]
         public string MarcaPlacaMae { get; set; }
-        [Display(Name = "Modelo da placa mãe")]
+        [Display(Name = "Modelo")]
         public string ModeloPlacaMae { get; set; }
 
-        [Display(Name = "Marca do Processador")]
+        [Display(Name = "Marca")]
         public string MarcaProcessador { get; set; }
-        [Display(Name = "Modelo do Processador")]
+        [Display(Name = "Modelo")]
         public string ModeloProcessador { get; set; }
-        [Display(Name = "Velocidade do Processador")]
+        [Display(Name = "Velocidade")]
         public string VelocidadeProcessador { get; set; }
     }
 }

@@ -23,6 +23,8 @@ namespace Sistema.Apresentacao.Mapeamentos
                 .ForMember(placaMae => placaMae.IDPlacaMae, configuracaoMembro => configuracaoMembro.MapFrom(placaMaeViewModelLista => placaMaeViewModelLista.IDPlacaMae))
                 .ForMember(placaMae => placaMae.Marca, configuracaoMembro => configuracaoMembro.MapFrom(placaMaeViewModelLista => placaMaeViewModelLista.Marca))
                 .ForMember(placaMae => placaMae.Modelo, configuracaoMembro => configuracaoMembro.MapFrom(placaMaeViewModelLista => placaMaeViewModelLista.Modelo))
+
+                //.ForMember(placaMae => placaMae.Computadores[0].IDComputador, configuracaoMembro => configuracaoMembro.MapFrom(placaMaeViewModelLista => placaMaeViewModelLista.IDComputador))
                 ;
 
             CreateMap<PlacaMae, PlacaMaeViewModelEdita>()
@@ -35,6 +37,8 @@ namespace Sistema.Apresentacao.Mapeamentos
                 .ForMember(placaMae => placaMae.IDPlacaMae, configuracaoMembro => configuracaoMembro.MapFrom(placaMaeViewModelEdita => placaMaeViewModelEdita.IDPlacaMae))
                 .ForMember(placaMae => placaMae.Marca, configuracaoMembro => configuracaoMembro.MapFrom(placaMaeViewModelEdita => placaMaeViewModelEdita.Marca))
                 .ForMember(placaMae => placaMae.Modelo, configuracaoMembro => configuracaoMembro.MapFrom(placaMaeViewModelEdita => placaMaeViewModelEdita.Modelo))
+
+                //.ForMember(placaMae => placaMae.Computadores[0].IDComputador, configuracaoMembro => configuracaoMembro.MapFrom(placaMaeViewModelEdita => placaMaeViewModelEdita.IDComputador))
                 ;
         }
     }

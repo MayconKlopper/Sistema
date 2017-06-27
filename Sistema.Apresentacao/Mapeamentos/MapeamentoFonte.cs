@@ -23,6 +23,8 @@ namespace Sistema.Apresentacao.Mapeamentos
                 .ForMember(fonte => fonte.IDFonte, configuracaoMembro => configuracaoMembro.MapFrom(fonteViewModelLista => fonteViewModelLista.IDFonte))
                 .ForMember(fonte => fonte.Marca, configuracaoMembro => configuracaoMembro.MapFrom(fonteViewModelLista => fonteViewModelLista.Marca))
                 .ForMember(fonte => fonte.Modelo, configuracaoMembro => configuracaoMembro.MapFrom(fonteViewModelLista => fonteViewModelLista.Modelo))
+
+                //.ForMember(fonte => fonte.Computadores[0].IDComputador, configuracaoMembro => configuracaoMembro.MapFrom(fonteViewModelLista => fonteViewModelLista.IDComputador))
                 ;
 
             CreateMap<Fonte, FonteViewModelEdita>()
@@ -35,6 +37,8 @@ namespace Sistema.Apresentacao.Mapeamentos
                 .ForMember(fonte => fonte.IDFonte, configuracaoMembro => configuracaoMembro.MapFrom(fonteViewModelEdita => fonteViewModelEdita.IDFonte))
                 .ForMember(fonte => fonte.Marca, configuracaoMembro => configuracaoMembro.MapFrom(fonteViewModelEdita => fonteViewModelEdita.Marca))
                 .ForMember(fonte => fonte.Modelo, configuracaoMembro => configuracaoMembro.MapFrom(fonteViewModelEdita => fonteViewModelEdita.Modelo))
+
+                //.ForMember(fonte => fonte.Computadores[0].IDComputador, configuracaoMembro => configuracaoMembro.MapFrom(fonteViewModelEdita => fonteViewModelEdita.IDComputador))
                 ;
         }
     }

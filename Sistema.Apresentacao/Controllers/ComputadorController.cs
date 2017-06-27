@@ -69,7 +69,7 @@ namespace Sistema.Apresentacao.Controllers
         {
             try
             {
-                Computador computador = Mapper.Map<Computador>(computadorViewModelCria);
+                Computador computador = new Computador();
                 computador.IDUsuario = User.Identity.GetUserId();
 
                 computador.Fonte = Mapper.Map<Fonte>(computadorViewModelCria);
@@ -119,6 +119,7 @@ namespace Sistema.Apresentacao.Controllers
             Fonte fonte = servicoFonte.RetornarPorID(id);
 
             FonteViewModelLista fonteViewModelLista = Mapper.Map<FonteViewModelLista>(fonte);
+            fonteViewModelLista.IDComputador = fonte.Computadores[0].IDComputador;
 
             return View(fonteViewModelLista);
         }
@@ -129,6 +130,7 @@ namespace Sistema.Apresentacao.Controllers
             Fonte fonte = servicoFonte.RetornarPorID(id);
 
             FonteViewModelEdita fonteViewModelEdita = Mapper.Map<FonteViewModelEdita>(fonte);
+            fonteViewModelEdita.IDComputador = fonte.Computadores[0].IDComputador;
 
             return View(fonteViewModelEdita);
         }
@@ -159,7 +161,9 @@ namespace Sistema.Apresentacao.Controllers
         public ActionResult ListarHD(int id)
         {
             HD hd = servicoHD.RetornarPorID(id);
+
             HDViewModelLista hdViewModelLista = Mapper.Map<HDViewModelLista>(hd);
+            hdViewModelLista.IDComputador = hd.Computadores[0].IDComputador;
 
             return View(hdViewModelLista);
         }
@@ -168,9 +172,11 @@ namespace Sistema.Apresentacao.Controllers
         public ActionResult EditarHD(int id)
         {
             HD hd = servicoHD.RetornarPorID(id);
-            HDViewModelEdita hdViewModelLista = Mapper.Map<HDViewModelEdita>(hd);
 
-            return View(hdViewModelLista);
+            HDViewModelEdita hdViewModelEdita = Mapper.Map<HDViewModelEdita>(hd);
+            hdViewModelEdita.IDComputador = hd.Computadores[0].IDComputador;
+
+            return View(hdViewModelEdita);
         }
 
         // POST: Computador/EditarrHD/5
@@ -201,6 +207,7 @@ namespace Sistema.Apresentacao.Controllers
             MemoriaRAM memoriaRAM = servicoMemoriaRAM.RetornarPorID(id);
 
             MemoriaRAMViewModelLista memoriaRAMViewModelLista = Mapper.Map<MemoriaRAMViewModelLista>(memoriaRAM);
+            memoriaRAMViewModelLista.IDComputador = memoriaRAM.Computadores[0].IDComputador;
 
             return View(memoriaRAMViewModelLista);
         }
@@ -211,6 +218,7 @@ namespace Sistema.Apresentacao.Controllers
             MemoriaRAM memoriaRAM = servicoMemoriaRAM.RetornarPorID(id);
 
             MemoriaRAMViewModelEdita memoriaRAMViewModelEdita = Mapper.Map<MemoriaRAMViewModelEdita>(memoriaRAM);
+            memoriaRAMViewModelEdita.IDComputador = memoriaRAM.Computadores[0].IDComputador;
 
             return View(memoriaRAMViewModelEdita);
         }
@@ -243,6 +251,7 @@ namespace Sistema.Apresentacao.Controllers
             PlacaMae placaMae = servicoPlacaMae.RetornarPorID(id);
 
             PlacaMaeViewModelLista placaMaeViewModelLista = Mapper.Map<PlacaMaeViewModelLista>(placaMae);
+            placaMaeViewModelLista.IDComputador = placaMae.Computadores[0].IDComputador;
 
             return View(placaMaeViewModelLista);
         }
@@ -253,6 +262,7 @@ namespace Sistema.Apresentacao.Controllers
             PlacaMae placaMae = servicoPlacaMae.RetornarPorID(id);
 
             PlacaMaeViewModelEdita placaMaeViewModelEdita = Mapper.Map<PlacaMaeViewModelEdita>(placaMae);
+            placaMaeViewModelEdita.IDComputador = placaMae.Computadores[0].IDComputador;
 
             return View(placaMaeViewModelEdita);
         }
@@ -285,6 +295,7 @@ namespace Sistema.Apresentacao.Controllers
             Processador processador = servicoProcessador.RetornarPorID(id);
 
             ProcessadorViewModelLista processadorViewModelLista = Mapper.Map<ProcessadorViewModelLista>(processador);
+            processadorViewModelLista.IDComputador = processador.Computadores[0].IDComputador;
 
             return View(processadorViewModelLista);
         }
@@ -295,6 +306,7 @@ namespace Sistema.Apresentacao.Controllers
             Processador processador = servicoProcessador.RetornarPorID(id);
 
             ProcessadorViewModelEdita processadorViewModelEdita = Mapper.Map<ProcessadorViewModelEdita>(processador);
+            processadorViewModelEdita.IDComputador = processador.Computadores[0].IDComputador;
 
             return View(processadorViewModelEdita);
         }

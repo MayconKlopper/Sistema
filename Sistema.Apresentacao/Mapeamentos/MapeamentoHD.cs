@@ -23,6 +23,8 @@ namespace Sistema.Apresentacao.Mapeamentos
                 .ForMember(hd => hd.IDHD, configuracaoMembro => configuracaoMembro.MapFrom(hdViewModelLista => hdViewModelLista.IDHD))
                 .ForMember(hd => hd.Quantidade, configuracaoMembro => configuracaoMembro.MapFrom(hdViewModelLista => hdViewModelLista.Quantidade))
                 .ForMember(hd => hd.Capacidade, configuracaoMembro => configuracaoMembro.MapFrom(hdViewModelLista => hdViewModelLista.Capacidade))
+
+                //.ForMember(hd => hd.Computadores[0].IDComputador, configuracaoMembro => configuracaoMembro.MapFrom(hdViewModelLista => hdViewModelLista.IDComputador))
                 ;
 
             CreateMap<HD, HDViewModelEdita>()
@@ -35,6 +37,8 @@ namespace Sistema.Apresentacao.Mapeamentos
                 .ForMember(hd => hd.IDHD, configuracaoMembro => configuracaoMembro.MapFrom(hdViewModelEdita => hdViewModelEdita.IDHD))
                 .ForMember(hd => hd.Quantidade, configuracaoMembro => configuracaoMembro.MapFrom(hdViewModelEdita => hdViewModelEdita.Quantidade))
                 .ForMember(hd => hd.Capacidade, configuracaoMembro => configuracaoMembro.MapFrom(hdViewModelEdita => hdViewModelEdita.Capacidade))
+
+                //.ForMember(hd => hd.Computadores[0].IDComputador, configuracaoMembro => configuracaoMembro.MapFrom(hdViewModelEdita => hdViewModelEdita.IDComputador))
                 ;
         }
     }

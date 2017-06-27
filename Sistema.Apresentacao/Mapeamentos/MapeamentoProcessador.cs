@@ -25,6 +25,8 @@ namespace Sistema.Apresentacao.Mapeamentos
                 .ForMember(processador => processador.Marca, configuracaoMembro => configuracaoMembro.MapFrom(processadorViewModelLista => processadorViewModelLista.Marca))
                 .ForMember(processador => processador.Modelo, configuracaoMembro => configuracaoMembro.MapFrom(processadorViewModelLista => processadorViewModelLista.Modelo))
                 .ForMember(processador => processador.Velocidade, configuracaoMembro => configuracaoMembro.MapFrom(processadorViewModelLista => processadorViewModelLista.Velocidade))
+
+                //.ForMember(processador => processador.Computadores[0].IDComputador, configuracaoMembro => configuracaoMembro.MapFrom(processadorViewModelLista => processadorViewModelLista.IDComputador))
                 ;
 
             CreateMap<Processador, ProcessadorViewModelEdita>()
@@ -39,6 +41,8 @@ namespace Sistema.Apresentacao.Mapeamentos
                 .ForMember(processador => processador.Marca, configuracaoMembro => configuracaoMembro.MapFrom(processadorViewModelEdita => processadorViewModelEdita.Marca))
                 .ForMember(processador => processador.Modelo, configuracaoMembro => configuracaoMembro.MapFrom(processadorViewModelEdita => processadorViewModelEdita.Modelo))
                 .ForMember(processador => processador.Velocidade, configuracaoMembro => configuracaoMembro.MapFrom(processadorViewModelEdita => processadorViewModelEdita.Velocidade))
+
+                //.ForMember(processador => processador.Computadores[0].IDComputador, configuracaoMembro => configuracaoMembro.MapFrom(processadorViewModelEdita => processadorViewModelEdita.IDComputador))
                 ;
 
         }

@@ -1,42 +1,48 @@
 ﻿@model Sistema.Apresentacao.Models.PlacaMaeViewModelLista
 
 @{
-    ViewBag.Title = "ListarPlacaMae";
+    ViewBag.Title = "Dados da Placa Mãe";
 }
 
-<h2>ListarPlacaMae</h2>
+<h2 style="text-align: center;">Computador</h2>
+<hr />
 
-<div>
-    <h4>PlacaMaeViewModelLista</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.IDPlacaMae)
-        </dt>
+<div class="container">
 
-        <dd>
-            @Html.DisplayFor(model => model.IDPlacaMae)
-        </dd>
+    <div class="form-group">
+        @Html.LabelFor(model => model.IDComputador)
+        @Html.DisplayFor(model => model.IDComputador)
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Marca)
-        </dt>
+    <div class="col-md-4"></div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Marca)
-        </dd>
+    <div class="panel panel-primary">
+        <div class="panel-heading"><h4 class="panel-title" style="text-align: center;">Dados da Placa Mãe</h4></div>
+        <div class="panel-body">
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IDPlacaMae)
+                    @Html.DisplayFor(model => model.IDPlacaMae)
+                </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Modelo)
-        </dt>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Marca, htmlAttributes: new { @class = "control-label" })
+                    @Html.TextBoxFor(model => model.Marca, new { @class = "form-control", @readonly = true })
+                </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Modelo)
-        </dd>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Modelo, htmlAttributes: new { @class = "control-label" })
+                    @Html.TextBoxFor(model => model.Modelo, new { @class = "form-control", @readonly = true })
+                </div>
+            </div>
+        </div>
+    </div>
 
-    </dl>
+    <div class="form-group">
+        @Html.ActionLink("Editar", "EditarPlacaMae", new { id = Model.IDPlacaMae }, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-primary" })
+    </div>
+
+    <div class="col-md-4"></div>
+
 </div>
-<p>
-    @Html.ActionLink("Editar", "EditarPlacaMae", new { id = Model.IDPlacaMae }) |
-    @Html.ActionLink("Voltar para Lista de Computadores", "Index")
-</p>

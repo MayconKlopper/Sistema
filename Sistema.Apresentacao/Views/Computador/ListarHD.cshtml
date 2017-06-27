@@ -1,42 +1,48 @@
 ﻿@model Sistema.Apresentacao.Models.HDViewModelLista
 
 @{
-    ViewBag.Title = "ListarHD";
+    ViewBag.Title = "Dados do(s) Hard Disc(s)";
 }
 
-<h2>ListarHD</h2>
+<h2 style="text-align: center;">Computador</h2>
+<hr />
 
-<div>
-    <h4>HDViewModelLista</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.IDHD)
-        </dt>
+<div class="container">
 
-        <dd>
-            @Html.DisplayFor(model => model.IDHD)
-        </dd>
+    <div class="form-group">
+        @Html.LabelFor(model => model.IDComputador)
+        @Html.DisplayFor(model => model.IDComputador)
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Quantidade)
-        </dt>
+    <div class="col-md-4"></div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Quantidade)
-        </dd>
+    <div class="panel panel-primary">
+        <div class="panel-heading"><h4 class="panel-title" style="text-align: center;">Dados do(s) Hard Disc(s)</h4></div>
+        <div class="panel-body">
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IDHD)
+                    @Html.DisplayFor(model => model.IDHD)
+                </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Capacidade)
-        </dt>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Quantidade, htmlAttributes: new { @class = "control-label" })
+                    @Html.TextBoxFor(model => model.Quantidade, new { @class = "form-control", @readonly = true })
+                </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Capacidade)
-        </dd>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Capacidade, htmlAttributes: new { @class = "control-label" })
+                    @Html.TextBoxFor(model => model.Capacidade, new { @class = "form-control", @readonly = true })
+                </div>
+            </div>
+        </div>
+    </div>
 
-    </dl>
+    <div class="form-group">
+        @Html.ActionLink("Editar", "EditarHD", new { id = Model.IDHD }, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-primary" })
+    </div>
+
+    <div class="col-md-4"></div>
+
 </div>
-<p>
-    @Html.ActionLink("Editar", "EditarHD", new { id = Model.IDHD }) |
-    @Html.ActionLink("Voltar para Lista de Computadores", "Index")
-</p>

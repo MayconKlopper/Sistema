@@ -1,42 +1,48 @@
 ﻿@model Sistema.Apresentacao.Models.MemoriaRAMViewModelLista
 
 @{
-    ViewBag.Title = "ListarMemoriaRAM";
+    ViewBag.Title = "Dados da(s) Memória(s) RAM";
 }
 
-<h2>ListarMemoriaRAM</h2>
+<h2 style="text-align: center;">Computador</h2>
+<hr />
 
-<div>
-    <h4>MemoriaRAMViewModelLista</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.IDMemoriaRAM)
-        </dt>
+<div class="container">
 
-        <dd>
-            @Html.DisplayFor(model => model.IDMemoriaRAM)
-        </dd>
+    <div class="form-group">
+        @Html.LabelFor(model => model.IDComputador)
+        @Html.DisplayFor(model => model.IDComputador)
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Quantidade)
-        </dt>
+    <div class="col-md-4"></div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Quantidade)
-        </dd>
+    <div class="panel panel-primary">
+        <div class="panel-heading"><h4 class="panel-title" style="text-align: center;">Dados da(s) Memória(s) RAM</h4></div>
+        <div class="panel-body">
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IDMemoriaRAM)
+                    @Html.DisplayFor(model => model.IDMemoriaRAM)
+                </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Capacidade)
-        </dt>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Quantidade, htmlAttributes: new { @class = "control-label" })
+                    @Html.TextBoxFor(model => model.Quantidade, new { @class = "form-control", @readonly = true })
+                </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Capacidade)
-        </dd>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Capacidade, htmlAttributes: new { @class = "control-label" })
+                    @Html.TextBoxFor(model => model.Capacidade, new { @class = "form-control", @readonly = true })
+                </div>
+            </div>
+        </div>
+    </div>
 
-    </dl>
+    <div class="form-group">
+        @Html.ActionLink("Editar", "EditarMemoriaRAM", new { id = Model.IDMemoriaRAM }, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-primary" })
+    </div>
+
+    <div class="col-md-4"></div>
+
 </div>
-<p>
-    @Html.ActionLink("Editar", "EditarMemoriaRAM", new { id = Model.IDMemoriaRAM }) |
-    @Html.ActionLink("Voltar para Lista de Computadores", "Index")
-</p>
