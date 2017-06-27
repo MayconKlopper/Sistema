@@ -73,16 +73,21 @@ namespace Sistema.Apresentacao.Controllers
                 computador.IDUsuario = User.Identity.GetUserId();
 
                 computador.Fonte = Mapper.Map<Fonte>(computadorViewModelCria);
+                computador.HD = Mapper.Map<HD>(computadorViewModelCria);
                 computador.MemoriaRAM = Mapper.Map<MemoriaRAM>(computadorViewModelCria);
                 computador.PlacaMae = Mapper.Map<PlacaMae>(computadorViewModelCria);
                 computador.Processador = Mapper.Map<Processador>(computadorViewModelCria);
 
                 servicoComputador.Inserir(computador);
 
+                TempData["MensagemSucesso"] = "Computador cadastrado com sucesso!";
+
                 return RedirectToAction("Index");
             }
-            catch
+            catch(Exception ex)
             {
+                ViewBag.MensagemErro = "Ocorreu um erro, tente novamente ou entre em contato com nosso suporte. Detalhe do erro: " + ex.Message;
+
                 return View();
             }
         }
@@ -90,21 +95,48 @@ namespace Sistema.Apresentacao.Controllers
         // GET: Computador/DeletarComputador/5
         public ActionResult DeletarComputador(int id)
         {
-            return View();
+            Computador computador = servicoComputador.RetornarPorID(id);
+
+            ComputadorViewModelExclui computadorViewModeExclui = Mapper.Map<ComputadorViewModelExclui>(computador);
+
+            return View(computadorViewModeExclui);
         }
 
         // POST: Computador/DeletarComputador/5
         [HttpPost]
-        public ActionResult DeletarComputador(int id, FormCollection collection)
+        public ActionResult DeletarComputador(ComputadorViewModelExclui computadorViewModelExclui)
         {
             try
             {
-                // TODO: Add delete logic here
+                Computador computador = new Computador();
+                computador.IDComputador = computadorViewModelExclui.IDComputador;
+                computador.IDFonte = computadorViewModelExclui.IDFonte;
+                computador.IDHD = computadorViewModelExclui.IDHD;
+                computador.IDMemoriaRAM = computadorViewModelExclui.IDMemoriaRAM;
+                computador.IDPlacaMae = computadorViewModelExclui.IDPlacaMae;
+                computador.IDProcessador = computadorViewModelExclui.IDProcessador;
+
+                Fonte fonte = Mapper.Map<Fonte>(computadorViewModelExclui);
+                HD hd = Mapper.Map<HD>(computadorViewModelExclui);
+                MemoriaRAM memoriaRAM = Mapper.Map<MemoriaRAM>(computadorViewModelExclui);
+                PlacaMae placaMae = Mapper.Map<PlacaMae>(computadorViewModelExclui);
+                Processador processador = Mapper.Map<Processador>(computadorViewModelExclui);
+
+                servicoComputador.Deletar(computador);
+                servicoFonte.Deletar(fonte);
+                servicoHD.Deletar(hd);
+                servicoMemoriaRAM.Deletar(memoriaRAM);
+                servicoPlacaMae.Deletar(placaMae);
+                servicoProcessador.Deletar(processador);
+
+                TempData["MensagemSucesso"] = "Computador deletado com sucesso!";
 
                 return RedirectToAction("Index");
             }
-            catch
+            catch(Exception ex)
             {
+                ViewBag.MensagemErro = "Ocorreu um erro, tente novamente ou entre em contato com nosso suporte. Detalhe do erro: " + ex.Message;
+
                 return View();
             }
         }
@@ -145,10 +177,15 @@ namespace Sistema.Apresentacao.Controllers
 
                 servicoFonte.Atualizar(fonte);
 
+                TempData["MensagemSucesso"] = "Fonte editada com sucesso!";
+
                 return RedirectToAction("Index");
             }
-            catch
+            catch(Exception ex)
             {
+                ViewBag.MensagemErro = "Ocorreu um erro, tente novamente ou entre em contato com nosso suporte. Detalhe do erro: " + ex.Message;
+
+
                 return View();
             }
         }
@@ -189,10 +226,14 @@ namespace Sistema.Apresentacao.Controllers
 
                 servicoHD.Atualizar(hd);
 
+                TempData["MensagemSucesso"] = "HD editado com sucesso!";
+
                 return RedirectToAction("Index");
             }
-            catch
+            catch(Exception ex)
             {
+                ViewBag.MensagemErro = "Ocorreu um erro, tente novamente ou entre em contato com nosso suporte. Detalhe do erro: " + ex.Message;
+
                 return View();
             }
         }
@@ -233,10 +274,14 @@ namespace Sistema.Apresentacao.Controllers
 
                 servicoMemoriaRAM.Atualizar(memoriaRAM);
 
+                TempData["MensagemSucesso"] = "Memória RAM editada com sucesso!";
+
                 return RedirectToAction("Index");
             }
-            catch
+            catch(Exception ex)
             {
+                ViewBag.MensagemErro = "Ocorreu um erro, tente novamente ou entre em contato com nosso suporte. Detalhe do erro: " + ex.Message;
+
                 return View();
             }
         }
@@ -277,10 +322,14 @@ namespace Sistema.Apresentacao.Controllers
 
                 servicoPlacaMae.Atualizar(placaMae);
 
+                TempData["MensagemSucesso"] = "Placa mãe editada com sucesso!";
+
                 return RedirectToAction("Index");
             }
-            catch
+            catch(Exception ex)
             {
+                ViewBag.MensagemErro = "Ocorreu um erro, tente novamente ou entre em contato com nosso suporte. Detalhe do erro: " + ex.Message;
+
                 return View();
             }
         }
@@ -321,10 +370,14 @@ namespace Sistema.Apresentacao.Controllers
 
                 servicoProcessador.Atualizar(processador);
 
+                TempData["MensagemSucesso"] = "Processador editado com sucesso!";
+
                 return RedirectToAction("Index");
             }
-            catch
+            catch(Exception ex)
             {
+                ViewBag.MensagemErro = "Ocorreu um erro, tente novamente ou entre em contato com nosso suporte. Detalhe do erro: " + ex.Message;
+
                 return View();
             }
         }

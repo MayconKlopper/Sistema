@@ -30,6 +30,9 @@ namespace Sistema.InfraEstrutura.Contexto
             modelBuilder.Configurations.Add(new PlacaMaeConfiguracao());
             modelBuilder.Configurations.Add(new ProcessadorConfiguracao());
 
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+
             modelBuilder.Properties<string>().Configure(coluna => coluna.HasColumnType("varchar"));
         }
 

@@ -1,0 +1,154 @@
+﻿@model Sistema.Apresentacao.Models.ComputadorViewModelExclui
+
+@{
+    ViewBag.Title = "Deletar Computador";
+}
+
+<h2 style="text-align: center;">Deletar Computador</h2>
+<hr />
+
+<div class="alert-danger">
+    @ViewBag.MensagemErro
+    @TempData["MensagemErro"]
+</div>
+
+<h1></h1>
+
+<div class="form-group col-md-12">
+    @Html.LabelFor(model => model.IDComputador)
+    @Html.DisplayFor(model => model.IDComputador)
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.IDComputador)
+    @Html.HiddenFor(model => model.IDFonte)
+    @Html.HiddenFor(model => model.IDHD)
+    @Html.HiddenFor(model => model.IDMemoriaRAM)
+    @Html.HiddenFor(model => model.IDPlacaMae)
+    @Html.HiddenFor(model => model.IDProcessador)
+
+    <div class="form-horizontal container">
+
+        <div class="panel panel-danger">
+            <div class="panel-heading"><h4 class="panel-title" style="text-align: center;">Dados da Fonte</h4></div>
+            <div class="panel-body">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.IDFonte)
+                        @Html.DisplayFor(model => model.IDFonte)
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.MarcaFonte)
+                        @Html.EditorFor(model => model.MarcaFonte, new { htmlAttributes = new { @class = "form-control", @readonly = true } })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ModeloFonte, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.ModeloFonte, new { htmlAttributes = new { @class = "form-control", @readonly = true } })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-danger">
+            <div class="panel-heading"><h4 class="panel-title" style="text-align: center;">Dados do(s) Hard Disc(s)</h4></div>
+            <div class="panel-body">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.IDHD)
+                        @Html.DisplayFor(model => model.IDHD)
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.QuantidadeHD)
+                        @Html.EditorFor(model => model.QuantidadeHD, new { htmlAttributes = new { @class = "form-control", @readonly = true } })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.CapacidadeHD, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.CapacidadeHD, new { htmlAttributes = new { @class = "form-control", @readonly = true } })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-danger">
+            <div class="panel-heading"><h4 class="panel-title" style="text-align: center;">Dados da(s) Memórias(s) RAM</h4></div>
+            <div class="panel-body">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.IDMemoriaRAM)
+                        @Html.DisplayFor(model => model.IDMemoriaRAM)
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.QuantidadeMemoriaRAM)
+                        @Html.EditorFor(model => model.QuantidadeMemoriaRAM, new { htmlAttributes = new { @class = "form-control", @readonly = true } })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.CapacidadeMemoriaRAM)
+                        @Html.EditorFor(model => model.CapacidadeMemoriaRAM, new { htmlAttributes = new { @class = "form-control", @readonly = true } })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-danger">
+            <div class="panel-heading"><h4 class="panel-title" style="text-align: center;">Dados da Placa Mãe</h4></div>
+            <div class="panel-body">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.IDPlacaMae)
+                        @Html.DisplayFor(model => model.IDPlacaMae)
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.MarcaPlacaMae)
+                        @Html.EditorFor(model => model.MarcaPlacaMae, new { htmlAttributes = new { @class = "form-control", @readonly = true } })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ModeloPlacaMae)
+                        @Html.EditorFor(model => model.ModeloPlacaMae, new { htmlAttributes = new { @class = "form-control", @readonly = true } })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-danger">
+            <div class="panel-heading"><h4 class="panel-title" style="text-align: center;">Dados do Processador</h4></div>
+            <div class="panel-body">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.IDProcessador)
+                        @Html.DisplayFor(model => model.IDProcessador)
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.MarcaProcessador)
+                        @Html.EditorFor(model => model.MarcaProcessador, new { htmlAttributes = new { @class = "form-control", @readonly = true } })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ModeloProcessador)
+                        @Html.EditorFor(model => model.ModeloProcessador, new { htmlAttributes = new { @class = "form-control", @readonly = true } })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.VelocidadeProcessador)
+                        @Html.EditorFor(model => model.VelocidadeProcessador, new { htmlAttributes = new { @class = "form-control", @readonly = true } })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group col-md-12">
+            <input type="submit" value="Deletar" class="btn btn-danger" />
+            @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-primary" })
+        </div>
+
+    </div>
+}

@@ -314,6 +314,7 @@
     <Content Include="Views\Computador\ListarFonte.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Computador\CriarComputador.cshtml" />
+    <Content Include="Views\Computador\DeletarComputador.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sistema.Aplicacao\Sistema.Aplicacao.csproj">

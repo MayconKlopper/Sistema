@@ -6,6 +6,17 @@
 
 <h1></h1>
 
+<div class="alert-danger">
+    @ViewBag.MensagemErro
+    @TempData["MensagemErro"]
+</div>
+<div class="alert-success">
+    @ViewBag.MensagemSucesso
+    @TempData["MensagemSucesso"]
+</div>
+
+<h1></h1>
+
 <div class="panel panel-primary">
     <div class="panel-heading"><h4 class="panel-title" style="text-align: center;">Lista de Computadores</h4></div>
     <div class="panel-body">
@@ -34,6 +45,9 @@
                 <th>
                     @Html.DisplayName("Dados do Processador")
                 </th>
+                <th>
+                    
+                </th>
             </tr>
 
             @foreach (var item in Model)
@@ -43,19 +57,22 @@
                         @Html.DisplayFor(modelItem => item.IDComputador)
                     </td>
                     <td>
-                        @Html.ActionLink("Exibir", "ListarFonte", new { id = item.IDFonte })
+                        @Html.ActionLink("Exibir", "ListarFonte", new { id = item.IDFonte }, new { @class = "btn btn-primary" })
                     </td>
                     <td>
-                        @Html.ActionLink("Exibir", "ListarHD", new { id = item.IDHD })
+                        @Html.ActionLink("Exibir", "ListarHD", new { id = item.IDHD }, new { @class = "btn btn-primary" })
                     </td>
                     <td>
-                        @Html.ActionLink("Exibir", "ListarMemoriaRAM", new { id = item.IDMemoriaRAM })
+                        @Html.ActionLink("Exibir", "ListarMemoriaRAM", new { id = item.IDMemoriaRAM }, new { @class = "btn btn-primary" })
                     </td>
                     <td>
-                        @Html.ActionLink("Exibir", "ListarPlacaMae", new { id = item.IDPlacaMae })
+                        @Html.ActionLink("Exibir", "ListarPlacaMae", new { id = item.IDPlacaMae }, new { @class = "btn btn-primary" })
                     </td>
                     <td>
-                        @Html.ActionLink("Exibir", "ListarProcessador", new { id = item.IDProcessador })
+                        @Html.ActionLink("Exibir", "ListarProcessador", new { id = item.IDProcessador }, new { @class = "btn btn-primary" })
+                    </td>
+                    <td>
+                        @Html.ActionLink("Excluir", "DeletarComputador", new { id = item.IDComputador }, new { @class = "btn btn-danger" })
                     </td>
                 </tr>
             }
